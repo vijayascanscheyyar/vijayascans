@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+main {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact,
+.location {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.contact h2,
+.location h2 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#map {
+  width: 100%;
+  height: 200px;
+  background: #333;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  margin: 0;
+}
