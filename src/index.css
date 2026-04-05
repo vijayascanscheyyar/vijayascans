@@ -1,0 +1,157 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
+  color: #1a2940;
+  background: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/* iOS Safari tap fix */
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* ===== MEDICAL PATTERN — LIGHT SECTIONS ===== */
+.medical-bg {
+  background-image: url("/src/assets/medical-pattern.png");
+  background-repeat: repeat;
+  background-size: 400px;
+  background-position: center;
+  position: relative;
+}
+
+.medical-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 249, 252, 0.91);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.medical-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== MEDICAL PATTERN — DARK SECTIONS ===== */
+.medical-bg-dark {
+  background-image: url("/src/assets/medical-pattern.png");
+  background-repeat: repeat;
+  background-size: 400px;
+  background-position: center;
+  position: relative;
+}
+
+.medical-bg-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 37, 69, 0.93);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.medical-bg-dark > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== DESKTOP (1025px and above) ===== */
+@media (min-width: 1025px) {
+  section {
+    padding: 4.5rem 2.5rem;
+  }
+
+  .medical-bg,
+  .medical-bg-dark {
+    background-size: 400px;
+  }
+}
+
+/* ===== iPad Pro / Tablet landscape (769px–1024px) ===== */
+@media (max-width: 1024px) {
+  section {
+    padding: 3.5rem 2rem !important;
+  }
+
+  .medical-bg,
+  .medical-bg-dark {
+    background-size: 320px;
+  }
+
+  h2 {
+    font-size: 1.9rem !important;
+  }
+}
+
+/* ===== iPad portrait / large phones (481px–768px) ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1.2rem !important;
+  }
+
+  .medical-bg,
+  .medical-bg-dark {
+    background-size: 280px;
+  }
+
+  h2 {
+    font-size: 1.7rem !important;
+  }
+}
+
+/* ===== iPhone / small phones (up to 480px) ===== */
+@media (max-width: 480px) {
+  section {
+    padding: 2.5rem 1rem !important;
+  }
+
+  .medical-bg,
+  .medical-bg-dark {
+    background-size: 220px;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* ===== iPhone SE / very small screens (up to 375px) ===== */
+@media (max-width: 375px) {
+  section {
+    padding: 2rem 0.8rem !important;
+  }
+
+  .medical-bg,
+  .medical-bg-dark {
+    background-size: 180px;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+  }
+}
